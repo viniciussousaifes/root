@@ -1,0 +1,23 @@
+.sidebar {
+    min-height: 100vh;
+    background-color: #212529;
+}
+
+.sidebar .nav-link {
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.sidebar .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+}
+
+.sidebar-footer {
+    background-color: rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,49 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #0d6efd;
+}
+
+.hero {
+  background: linear-gradient(to right, #0d6efd, #0a58ca);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-top: 15px;
+}
+
+.btn-light {
+  background-color: white;
+  color: #0d6efd;
+  border: none;
+  font-weight: bold;
+}
+
+.section-title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0d6efd;
+}
+
+.sobre, .beneficios {
+  padding: 60px 20px;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  color: #6c757d;
+  padding: 20px 0;
+  text-align: center;
+}
