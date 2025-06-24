@@ -6,7 +6,7 @@ $host = 'localhost';
 $usuario = 'root';
 $senha = 'serra';
 $banco = 'gestormax';
-$port = '3306';
+
 
 $conn = new mysqli($host, $usuario, $senha, $banco);
 

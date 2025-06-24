@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao'], $_POST['idnam
 
 // Paginação
 $page = isset($_GET['page']) && is_numeric($_GET['page']) ? intval($_GET['page']) : 1;
-$itemsPerPage = 10;
+$itemsPerPage = 8;
 $offset = ($page -1)* $itemsPerPage;
 
 $sqlCount = "SELECT COUNT(*) as total FROM usuarios";

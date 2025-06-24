@@ -22,8 +22,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['acao']) && $_POST['ac
     exit;
 }
 
-$sql = "SELECT p.*, c.nome AS cat_nome FROM produtos p LEFT JOIN categorias c ON p.categoria_id = c.categoria_id";
-$result = $conn->query($sql);
+// Configuração da paginaçãoAdd commentMore actions
+$itemsPerPage = 7; // Itens por página
+$page = isset($_GET['page']) ? max(1, intval($_GET['page'])) : 1; // Página atual
+$offset = ($page - 1) * $itemsPerPage; // Cálculo do offset
+
+// Consulta para contar o total de produtos
+$sqlCount = "SELECT COUNT(*) AS total FROM produtos";
+$resultCount = $conn->query($sqlCount);
+$totalProdutos = $resultCount->fetch_assoc()['total'];
+$totalPages = ceil($totalProdutos / $itemsPerPage);
+
+// Consulta principal com paginação
+$sql = "SELECT p.*, c.nome AS cat_nome FROM produtos p 
+        LEFT JOIN categorias c ON p.categoria_id = c.categoria_idAdd commentMore actions
+        LIMIT $offset, $itemsPerPage";
 ?>
 
 <!DOCTYPE html>
